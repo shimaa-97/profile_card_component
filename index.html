@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+*
+{
+    box-sizing: border-box;
+
+}
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+    .row::after
+ {
+   clear: both;
+   content: "";
+   display: table;
+ }
+[class^="col-"]
+{
+     float: left;
+     padding: 5px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body{
+  background-color: rgb(32, 192, 197);
+  /* border-image: url(./images/bg-pattern-top.svg)25 25 round; */
+  background-image: url(./images/bg-pattern-top.svg),
+   url(./images/bg-pattern-bottom.svg);
+   background-position:
+    top -520px left -320px, /* this positions the first image */
+    bottom -600px  right -300px ; /* this positions the second image */
+  background-repeat:
+    no-repeat; /* this applies to both images */
+  background-size: auto;
+}
+
+
+#container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  /* border: .5px black solid; */
+}
+#card
+    {
+      /* width:23%; */
+      height: 450px;
+      /* border: .5px black solid; */
+      border-radius: 11%;
+      background-color: white;
+          }
+
+ #imgProfile
+ {
+   display: flex;
+   justify-content: center;
+  align-items: center;
+  position:relative;
+  top: -15%;
+  
+ }
+ #info{
+  display: flex;
+   justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 0px;
+  padding-top: 0%;
+
+ }
+ hr{
+   color:gray;
+ }
+ #details
+ {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+   }
+
+   #details div p
+   {
+    color: gray;
+   }
+   @media only screen and (max-width: 768px) {
+  body {
+    background-color: rgb(32, 192, 197);
+    background-image: url(./images/bg-pattern-top.svg),
+   url(./images/bg-pattern-bottom.svg);
+   background-position:
+    top -620px left -420px,
+    bottom -750px  right -450px ;
+  background-repeat:
+    no-repeat;
+  background-size: auto;
+  };
+  /* #card
+    {
+      width:400px;
+      height: 450px;
+      
+      border-radius: 11%;
+      background-color: white;
+          } */
+}
+  
+     </style>
+</head>
+<body>
+  <section id="container">
+<!-- <svg width="978" height="978" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1=".779%" x2="50%" y2="100%" id="a"><stop stop-color="#0989B4" stop-opacity="0" offset="0%"/><stop stop-color="#53FFEE" offset="99.94%"/></linearGradient></defs><ellipse fill="url(#a)" transform="scale(1 -1) rotate(45 1669.55 0)" cx="489" cy="489" rx="489" ry="488" fill-rule="evenodd" opacity=".25"/></svg>
+<svg width="978" height="978" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1=".779%" x2="50%" y2="100%" id="a"><stop stop-color="#0989B4" stop-opacity="0" offset="0%"/><stop stop-color="#53FFEE" offset="99.94%"/></linearGradient></defs><ellipse fill="url(#a)" transform="rotate(-135 489 489)" cx="489" cy="489" rx="489" ry="488" fill-rule="evenodd" opacity=".5"/></svg> -->
+
+    <div id="card">
+      <div>
+        <img  src="./images/bg-pattern-card.svg" width="100%" style=" border-radius: 40px 40px 0 0">
+      </div>
+      <div id="imgProfile">
+        <img src="./images/image-victor.jpg" style="border-radius: 50%;">
+      </div>
+      <div id ="info"> 
+        <span>victor crest </span>
+        <span style="color: gray;padding-left: 5%;">26</span><br>
+     
+      </div>
+      <p style="text-align: center;color: gray;">london</p>
+      <hr>
+      <div class="row " id="details">
+        <div class="col-4">
+          <h3>80K</h3>
+          <p>followers</p>
+        </div>
+        <div class="col-4">
+          <h3>851</h3>
+          <p>likes</p>
+        </div>
+        <div class="col-4">
+         <h3>1.4k</h3> 
+         <p>photos</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">shimaa ismail</a>.
+  </div>
+</body>
+</html>
